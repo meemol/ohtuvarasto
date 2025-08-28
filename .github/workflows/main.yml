@@ -20,6 +20,7 @@ jobs:
         run: pip install poetry
       - name: Install dependencies
         run: poetry install
+        continue-on-error: true
       - name: Run tests
         run: poetry run coverage run --branch -m pytest
       - name: Coverage report
